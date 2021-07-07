@@ -1,0 +1,79 @@
+:root {
+  --red-color: rgb(230, 43, 43);
+  --white-color: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  user-select: none; /* Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  background-color: var(--red-color);
+}
+
+#content {
+  margin: 2.5rem 1rem;
+  color: var(--white-color);
+  text-align: center;
+  cursor: default;
+  animation: content-anim 0.8s linear;
+}
+
+h1 {
+  font: normal 2.6rem "Comic Sans MS", sans-serif;
+  margin-bottom: 2.3rem;
+  animation: heading-anim 6s alternate infinite;
+}
+
+button {
+  font: bold 1.4rem "Arial", sans-serif;
+  color: var(--red-color);
+  background-color: var(--white-color);
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.1rem;
+}
+
+button:hover {
+  color: var(--white-color);
+  background-color: var(--red-color);
+  cursor: pointer;
+}
+
+p {
+  font: normal 1.1rem "Arial", sans-serif;
+  margin-top: 1rem;
+  display: none;
+}
+
+#denmark-wins {
+  font: bold 2.3rem "Arial", sans-serif;
+}
+
+#for-sure {
+  font: normal 1.9rem "Arial", sans-serif;
+}
+
+@keyframes content-anim {
+  0% {
+    color: transparent;
+    transform: scale(0);
+    text-shadow: none;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heading-anim {
+  100% {
+    letter-spacing: 0.1rem;
+  }
+}
